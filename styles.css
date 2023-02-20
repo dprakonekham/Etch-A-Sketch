@@ -1,0 +1,11 @@
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(16,50px);
+    align-items: center;
+    justify-content: center;
+}
+.grid{
+    background-color: white;
+    color: white;
+    border: 1px solid black;
+}

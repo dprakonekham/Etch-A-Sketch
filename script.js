@@ -1,5 +1,5 @@
+const frame = document.querySelector('body');
 const grid = document.getElementById('gContainer');
-
 //Initial Board
 const gridContainer = document.querySelector('.gridContainer');
 gridContainer.style.gridTemplateColumns = "repeat(" + 16 + ", minmax(0,1fr))";
@@ -34,7 +34,7 @@ function howBig(num){
                     element.style.color = "black";
                     element.style.backgroundColor = "black";
                 })
-                grid.appendChild(element)
+                grid.appendChild(element);
             }
         }
     }
@@ -59,4 +59,17 @@ eraseButton.addEventListener(`click`, function(e){
         gridContents[i].style.color = "lightgrey"
         gridContents[i].style.backgroundColor = "lightgrey"
     }
+});
+
+let rotationValue = 0;
+document.addEventListener(`keydown`, function(e){
+    console.log(e.code);
+    if(e.code == "KeyD"){
+        rotationValue += 10;
+        frame.style.transform = "rotate(" + (rotationValue) + "deg)";
+    }else if(e.code == "KeyA"){
+        rotationValue -= 10;
+        frame.style.transform = "rotate(" + (rotationValue) + "deg)";
+    }
+
 });

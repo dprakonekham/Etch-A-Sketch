@@ -7,6 +7,9 @@ function howBig(num){
                 element.id = "grid" + i + j;
                 element.className = "grid"
                 element.textContent = "."
+                element.addEventListener(`mouseover`, function(e){
+                    element.style.backgroundColor = "black";
+                })
                 grid.appendChild(element)
             }
         }

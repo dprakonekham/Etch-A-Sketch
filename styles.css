@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     user-select: none;
     width: 50%;
-    height: 500px;
+    height: 700px;
 }
 .gridContainer{
     display: grid;

@@ -21,6 +21,7 @@ for(let i = 0; i < 16; i++){
 }
 
 function howBig(num){
+    //This function creates a new board of num x num
     for(let i = 0; i < num; i++){
         for(let j = 0; j < num; j++){
             const element = document.createElement("div");
@@ -56,6 +57,7 @@ const eraseButton = document.querySelector('.eraseBtn');
 const gridContents = grid.children;
 eraseButton.addEventListener(`click`, function(e){
     for(let i = 0; i < gridContents.length; i++){
+        //Set the board back to light grey
         gridContents[i].style.color = "lightgrey"
         gridContents[i].style.backgroundColor = "lightgrey"
     }

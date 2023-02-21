@@ -65,7 +65,6 @@ eraseButton.addEventListener(`click`, function(e){
 
 let rotationValue = 0;
 document.addEventListener(`keydown`, function(e){
-    console.log(e.code);
     if(e.code == "KeyD"){
         rotationValue += 10;
         frame.style.transform = "rotate(" + (rotationValue) + "deg)";
@@ -73,5 +72,4 @@ document.addEventListener(`keydown`, function(e){
         rotationValue -= 10;
         frame.style.transform = "rotate(" + (rotationValue) + "deg)";
     }
-
 });

@@ -13,6 +13,7 @@ body{
     border-top: 10px solid red;
     border-radius: 4px;
     overflow: hidden;
+    margin: 50px;
 
 }
 .gridContainer{

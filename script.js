@@ -13,7 +13,15 @@ function howBig(num){
     }
 }
 const gridDimensions = document.querySelector('.gridSize')
+const gridContainer= document.querySelector('.gridContainer')
+//grid-template-columns: repeat(16,50px);
 gridDimensions.addEventListener(`click`, function(e){
+    //Removes every child
+    while (grid.firstChild) {
+        grid.removeChild(grid.firstChild);
+      }
     let size = prompt("How Big? (Max 100)");
+    gridContainer.style.gridTemplateColumns = "repeat(" + size + ", minmax(0,1fr))";
+    gridContainer.style.gridTemplateRows = "repeat(" + size + ", minmax(0,1fr))";
     howBig(size)
 });
